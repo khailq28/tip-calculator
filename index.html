@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="./images/favicon-32x32.png">
+
+        <title>Frontend Mentor | Tip calculator app</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Space+Mono:wght@400;700&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <img src="images/logo.svg" alt="" class="logo">
+            <div class="card">
+                <div class="input">
+                    <div class="bill-container">
+                        <div class="label-wrapper">
+                            <label for="bill" class="title">Bill</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input-text" type="number"
+                                name="input-bill"
+                                id="input-bill" placeholder="0.0"
+                                onkeydown="javascript: return event.keyCode ==
+                                69 ? false : true"
+                                required>
+                            <img src="images/icon-dollar.svg" alt="icon-dollar">
+                        </div>
+                    </div>
+
+                    <div class="tip-container">
+                        <div class="label-wrapper">
+                            <label for="tip" class="title">
+                                Select Tip %
+                            </label>
+                        </div>
+                        <div class="btn-wrapper">
+                            <div data-per="0.05" class="btn tip active">5%</div>
+                            <div data-per="0.1" class="btn tip">10%</div>
+                            <div data-per="0.15" class="btn tip">15%</div>
+                            <div data-per="0.25" class="btn tip">25%</div>
+                            <div data-per="0.5" class="btn tip">50%</div>
+                            <input class="input-text" type="number"
+                                name="input-tip"
+                                id="input-tip" placeholder="Custom"
+                                onkeydown="javascript: return event.keyCode ==
+                                69 ? false : true"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="people-container">
+                        <div class="label-wrapper">
+                            <label for="input-people">Number of People</label>
+                            <div class="error-msg"></div>
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <input class="input-text" type="number"
+                                name="input-people" value="1"
+                                id="input-people" placeholder="1"
+                                onkeydown="javascript: return event.keyCode ==
+                                69 ? false : true"
+                                required>
+                            <img src="./images/icon-person.svg"
+                                alt="person-icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="output">
+                    <div class="line-wrapper">
+                        <div class="line-output">
+                            <div class="title-wrapper">
+                                <div class="title">Tip Amount</div>
+                                <div class="desc">/ person</div>
+                            </div>
+                            <div class="value" id="tip-amount">$00.00</div>
+                        </div>
+
+                        <div class="line-output">
+                            <div class="title-wrapper">
+                                <div class="title">Total</div>
+                                <div class="desc">/ person</div>
+                            </div>
+                            <div class="value" id="total">$00.00</div>
+                        </div>
+                    </div>
+                    <div class="btn reset">Reset</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://www.frontendmentor.io/profile/khailq28">Luong
+                Quang Khai</a>.
+        </div>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

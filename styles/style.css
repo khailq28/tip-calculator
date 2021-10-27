@@ -1,0 +1,270 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan1: hsl(186, 14%, 43%);
+    --dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --light-grayish-cyan1: hsl(185, 41%, 84%);
+    --light-grayish-cyan2: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.wrapper {
+    background-color: var(--light-grayish-cyan1);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "Space Mono", monospace;
+}
+
+.logo {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.input,
+.output {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input {
+    padding-right: 25px;
+}
+
+.output {
+    padding-left: 25px;
+}
+
+.logo {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    width: 920px;
+    height: 485px;
+}
+
+.bill-container,
+.tip-container,
+.people-container {
+    width: 100%;
+}
+
+.tip-container {
+    margin: 20px 0;
+}
+
+.label-wrapper {
+    color: #7a8889;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-text {
+    border: none;
+    box-shadow: none;
+    background-color: var(--light-grayish-cyan2);
+    border-radius: 5px;
+    color: var(--cyan);
+    padding: 0 8px 0 40px;
+    width: 100%;
+    line-height: 1.75;
+    font-weight: 700;
+    text-align: end;
+    outline: none;
+    transition: all 0.1s ease-in-out;
+    font-size: 24px;
+}
+
+.input-text:hover,
+.input-text:focus {
+    cursor: pointer;
+    outline: 2px solid var(--strong-cyan);
+}
+
+.btn-wrapper > .input-text {
+    padding: 0;
+    text-align: center;
+}
+
+.input-wrapper > .error {
+    outline: 2px solid red;
+}
+
+.error-msg {
+    color: red !important;
+}
+
+.input-wrapper > img {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.btn-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-wrapper > .tip {
+    height: 50px;
+    background-color: var(--cyan);
+    color: var(--white);
+}
+
+.btn-wrapper > .tip:hover,
+.active {
+    color: var(--cyan) !important;
+    background-color: var(--light-grayish-cyan1) !important;
+}
+
+.output {
+    padding: 40px;
+    width: 100%;
+    background-color: var(--cyan);
+    border-radius: 10px;
+}
+
+.output .line-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.output .line-wrapper .line-output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.output .line-wrapper .line-output .title-wrapper .title,
+.output .line-wrapper .line-output .title-wrapper .desc {
+    font-weight: 700;
+}
+
+.output .line-wrapper .line-output .title-wrapper .title {
+    font-size: 16px;
+    color: var(--white);
+}
+
+.output .line-wrapper .line-output .title-wrapper .desc {
+    font-size: 14px;
+    color: var(--strong-cyan);
+}
+
+.output .line-wrapper .line-output .value {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--light-grayish-cyan1);
+}
+
+.reset {
+    height: 50px;
+    background-color: var(--light-grayish-cyan1);
+    color: var(--cyan);
+}
+
+.reset:hover {
+    background-color: var(--light-grayish-cyan2);
+}
+
+@media only screen and (max-width: 919px) and (min-width: 375px) {
+    .wrapper {
+        height: 100%;
+    }
+
+    .card {
+        flex-direction: column;
+        width: 375px;
+        height: auto;
+    }
+
+    .input {
+        padding-right: 0;
+    }
+
+    .output {
+        padding: 45px 25px;
+        margin-top: 30px;
+    }
+
+    .btn-wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .output .line-wrapper .line-output .title-wrapper .title {
+        font-size: 14px;
+    }
+
+    .output .line-wrapper .line-output .title-wrapper .desc {
+        font-size: 12px;
+    }
+
+    .output .line-wrapper .line-output .value {
+        font-size: 30px;
+    }
+}
